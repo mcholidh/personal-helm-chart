@@ -1,0 +1,32 @@
+annotations:
+  category: Infrastructure
+apiVersion: v2
+appVersion: 2.8.1
+dependencies:
+- name: common
+  repository: https://github.com/mcholidh/personal-helm-chart/
+  tags:
+  - bitnami-common
+  version: 1.x.x
+- condition: zookeeper.enabled
+  name: zookeeper
+  repository: https://github.com/mcholidh/personal-helm-chart/
+  version: 7.x.x
+description: Custom Helm Chart for kafka based on Bitnami Repository Helm Chart
+home: https://github.com/mcholidh/personal-helm-chart/kafka
+icon: https://bitnami.com/assets/stacks/kafka/img/kafka-stack-220x234.png
+keywords:
+- kafka
+- zookeeper
+- streaming
+- producer
+- consumer
+maintainers:
+- email: phcholidh@gmail.com
+  name: mcholidh
+name: kafka
+sources:
+-https://github.com/mcholidh/personal-helm-chart/kafka
+- https://github.com/bitnami/bitnami-docker-kafka
+- https://kafka.apache.org/
+version: 14.4.3
