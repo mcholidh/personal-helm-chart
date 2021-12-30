@@ -46,7 +46,7 @@ gitlabUrl: https://gitlab.com/
 ## be retrieved from your GitLab Instance.
 ## ref: https://docs.gitlab.com/ce/ci/runners/README.html
 ##
-runnerRegistrationToken: "W3qErbbpYWmWC8dK9fyj"
+runnerRegistrationToken: "L7k-XPcYySJB19cr6iyY"
 
 ## The Runner Token for adding new Runners to the GitLab Server. This must
 ## be retrieved from your GitLab Instance. It is token of already registered runner.
