@@ -756,7 +756,7 @@ externalAccess:
 persistence:
   ## @param persistence.enabled Enable Kafka data persistence using PVC, note that Zookeeper persistence is unaffected
   ##
-  enabled: false
+  enabled: true
   ## @param persistence.existingClaim Provide an existing `PersistentVolumeClaim`, the value is evaluated as a template
   ## If defined, PVC must be created manually before volume will be bound
   ## The value is evaluated as a template
@@ -775,7 +775,7 @@ persistence:
     - ReadWriteOnce
   ## @param persistence.size PVC Storage Request for Kafka data volume
   ##
-  size: 8Gi
+  size: 40Gi
   ## @param persistence.annotations Annotations for the PVC
   ##
   annotations: {}
