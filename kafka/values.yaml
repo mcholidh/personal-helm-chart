@@ -810,7 +810,7 @@ logPersistence:
     - ReadWriteOnce
   ## @param logPersistence.size PVC Storage Request for Kafka logs volume
   ##
-  size: 8Gi
+  size: 40Gi
   ## @param logPersistence.annotations Annotations for the PVC
   ##
   annotations: {}
