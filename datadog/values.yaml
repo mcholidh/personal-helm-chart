@@ -1,0 +1,53 @@
+datadog:
+  apiKey: a881fe658419f3b709ce6d36e79e3bdc
+  appKey: c61ac1978348dd8372c016acc96c66afb63ada67
+  clusterName: datadog-eltrovert
+
+  # Enable the new `kubernetes_state_core` check.
+  kubeStateMetricsCore:
+    enabled: true
+  # Avoid deploying kube-state-metrics chart.
+  # The new `kubernetes_state_core` doesn't require to deploy the kube-state-metrics anymore.
+  kubeStateMetricsEnabled: false
+  
+  containers:
+    agent:
+      # resources for the Agent container
+      resources:
+        requests:
+          cpu: 200m
+          memory: 256Mi
+        limits:
+          cpu: 200m
+          memory: 256Mi
+
+    traceAgent:
+      # resources for the Trace Agent container
+      resources:
+        requests:
+          cpu: 100m
+          memory: 200Mi
+        limits:
+          cpu: 100m
+          memory: 200Mi
+
+    processAgent:
+      # resources for the Process Agent container
+      resources:
+        requests:
+          cpu: 100m
+          memory: 200Mi
+        limits:
+          cpu: 100m
+          memory: 200Mi
+
+datadog:
+  logs:
+    enabled: true
+    containerCollectAll: true
+  apm:
+    portEnabled: true
+
+providers:
+  gke:
+    autopilot: true
